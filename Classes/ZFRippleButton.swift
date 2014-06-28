@@ -136,7 +136,6 @@ class ZFRippleButton: UIButton {
             groupAnim.duration = 0.7
             groupAnim.fillMode = kCAFillModeForwards
             groupAnim.removedOnCompletion = false
-            groupAnim.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
             groupAnim.animations = [shadowAnim, opacityAnim]
             
             self.layer.addAnimation(groupAnim, forKey:"shadowBack")
