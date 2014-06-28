@@ -3,11 +3,11 @@ ZFRippleButton
 
 iOS Custom UIButton effect inspired by Google Material Design written in Swift
 
-<p align="center"><img src="https://raw.githubusercontent.com/zoonooz/ZFRippleButton/master/Screenshot/color-button.gif"/></p>
+<p align="center"><img src="https://raw.githubusercontent.com/zoonooz/ZFRippleButton/master/Screenshot/colored-button.gif"/></p>
 
 ## Usage
 
-Set the UIButton class in Nib to ```ZFRippleButton``` or create it programmatically
+Set the UIButton class in Nib to ```ZFRippleButton``` or create it programmatically.
 
 ## Requirements
 - iOS >= 7.0
