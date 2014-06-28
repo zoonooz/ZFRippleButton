@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC346CBD195F150E0099F81E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC346CBC195F150E0099F81E /* AppDelegate.swift */; };
+		DC346CBF195F150E0099F81E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC346CBE195F150E0099F81E /* ViewController.swift */; };
+		DC346CC2195F150E0099F81E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC346CC0195F150E0099F81E /* Main.storyboard */; };
+		DC346CC4195F150E0099F81E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC346CC3195F150E0099F81E /* Images.xcassets */; };
+		DC346CD0195F150E0099F81E /* ZFRippleButtonDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC346CCF195F150E0099F81E /* ZFRippleButtonDemoTests.swift */; };
+		DC346CDB195F157D0099F81E /* ZFRippleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC346CDA195F157D0099F81E /* ZFRippleButton.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DC346CCA195F150E0099F81E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC346CAF195F150E0099F81E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC346CB6195F150E0099F81E;
+			remoteInfo = ZFRippleButtonDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DC346CB7195F150E0099F81E /* ZFRippleButtonDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZFRippleButtonDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC346CBB195F150E0099F81E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC346CBC195F150E0099F81E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DC346CBE195F150E0099F81E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DC346CC1195F150E0099F81E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DC346CC3195F150E0099F81E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DC346CC9195F150E0099F81E /* ZFRippleButtonDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZFRippleButtonDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC346CCE195F150E0099F81E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC346CCF195F150E0099F81E /* ZFRippleButtonDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZFRippleButtonDemoTests.swift; sourceTree = "<group>"; };
+		DC346CDA195F157D0099F81E /* ZFRippleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZFRippleButton.swift; path = ../../../Classes/ZFRippleButton.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC346CB4195F150E0099F81E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC346CC6195F150E0099F81E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DC346CAE195F150E0099F81E = {
+			isa = PBXGroup;
+			children = (
+				DC346CB9195F150E0099F81E /* ZFRippleButtonDemo */,
+				DC346CCC195F150E0099F81E /* ZFRippleButtonDemoTests */,
+				DC346CB8195F150E0099F81E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DC346CB8195F150E0099F81E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC346CB7195F150E0099F81E /* ZFRippleButtonDemo.app */,
+				DC346CC9195F150E0099F81E /* ZFRippleButtonDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC346CB9195F150E0099F81E /* ZFRippleButtonDemo */ = {
+			isa = PBXGroup;
+			children = (
+				DC346CD9195F15690099F81E /* Classes */,
+				DC346CBC195F150E0099F81E /* AppDelegate.swift */,
+				DC346CBE195F150E0099F81E /* ViewController.swift */,
+				DC346CC0195F150E0099F81E /* Main.storyboard */,
+				DC346CC3195F150E0099F81E /* Images.xcassets */,
+				DC346CBA195F150E0099F81E /* Supporting Files */,
+			);
+			path = ZFRippleButtonDemo;
+			sourceTree = "<group>";
+		};
+		DC346CBA195F150E0099F81E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC346CBB195F150E0099F81E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DC346CCC195F150E0099F81E /* ZFRippleButtonDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				DC346CCF195F150E0099F81E /* ZFRippleButtonDemoTests.swift */,
+				DC346CCD195F150E0099F81E /* Supporting Files */,
+			);
+			path = ZFRippleButtonDemoTests;
+			sourceTree = "<group>";
+		};
+		DC346CCD195F150E0099F81E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC346CCE195F150E0099F81E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DC346CD9195F15690099F81E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DC346CDA195F157D0099F81E /* ZFRippleButton.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC346CB6195F150E0099F81E /* ZFRippleButtonDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC346CD3195F150E0099F81E /* Build configuration list for PBXNativeTarget "ZFRippleButtonDemo" */;
+			buildPhases = (
+				DC346CB3195F150E0099F81E /* Sources */,
+				DC346CB4195F150E0099F81E /* Frameworks */,
+				DC346CB5195F150E0099F81E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZFRippleButtonDemo;
+			productName = ZFRippleButtonDemo;
+			productReference = DC346CB7195F150E0099F81E /* ZFRippleButtonDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DC346CC8195F150E0099F81E /* ZFRippleButtonDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC346CD6195F150E0099F81E /* Build configuration list for PBXNativeTarget "ZFRippleButtonDemoTests" */;
+			buildPhases = (
+				DC346CC5195F150E0099F81E /* Sources */,
+				DC346CC6195F150E0099F81E /* Frameworks */,
+				DC346CC7195F150E0099F81E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC346CCB195F150E0099F81E /* PBXTargetDependency */,
+			);
+			name = ZFRippleButtonDemoTests;
+			productName = ZFRippleButtonDemoTests;
+			productReference = DC346CC9195F150E0099F81E /* ZFRippleButtonDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DC346CAF195F150E0099F81E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = zoonref;
+				TargetAttributes = {
+					DC346CB6195F150E0099F81E = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					DC346CC8195F150E0099F81E = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = DC346CB6195F150E0099F81E;
+					};
+				};
+			};
+			buildConfigurationList = DC346CB2195F150E0099F81E /* Build configuration list for PBXProject "ZFRippleButtonDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DC346CAE195F150E0099F81E;
+			productRefGroup = DC346CB8195F150E0099F81E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC346CB6195F150E0099F81E /* ZFRippleButtonDemo */,
+				DC346CC8195F150E0099F81E /* ZFRippleButtonDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC346CB5195F150E0099F81E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC346CC2195F150E0099F81E /* Main.storyboard in Resources */,
+				DC346CC4195F150E0099F81E /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC346CC7195F150E0099F81E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC346CB3195F150E0099F81E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC346CDB195F157D0099F81E /* ZFRippleButton.swift in Sources */,
+				DC346CBF195F150E0099F81E /* ViewController.swift in Sources */,
+				DC346CBD195F150E0099F81E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC346CC5195F150E0099F81E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC346CD0195F150E0099F81E /* ZFRippleButtonDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DC346CCB195F150E0099F81E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC346CB6195F150E0099F81E /* ZFRippleButtonDemo */;
+			targetProxy = DC346CCA195F150E0099F81E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DC346CC0195F150E0099F81E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC346CC1195F150E0099F81E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DC346CD1195F150E0099F81E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DC346CD2195F150E0099F81E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DC346CD4195F150E0099F81E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = ZFRippleButtonDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DC346CD5195F150E0099F81E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = ZFRippleButtonDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DC346CD7195F150E0099F81E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ZFRippleButtonDemo.app/ZFRippleButtonDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ZFRippleButtonDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		DC346CD8195F150E0099F81E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ZFRippleButtonDemo.app/ZFRippleButtonDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ZFRippleButtonDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC346CB2195F150E0099F81E /* Build configuration list for PBXProject "ZFRippleButtonDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC346CD1195F150E0099F81E /* Debug */,
+				DC346CD2195F150E0099F81E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC346CD3195F150E0099F81E /* Build configuration list for PBXNativeTarget "ZFRippleButtonDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC346CD4195F150E0099F81E /* Debug */,
+				DC346CD5195F150E0099F81E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DC346CD6195F150E0099F81E /* Build configuration list for PBXNativeTarget "ZFRippleButtonDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC346CD7195F150E0099F81E /* Debug */,
+				DC346CD8195F150E0099F81E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DC346CAF195F150E0099F81E /* Project object */;
+}
