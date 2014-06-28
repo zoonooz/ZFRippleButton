@@ -34,6 +34,7 @@ class ZFRippleButton: UIButton {
     }
     @IBInspectable var shadowRippleRadius: CGFloat = 1
     @IBInspectable var shadowRippleEnable: Bool = true
+    @IBInspectable var trackTouchLocation: Bool = false
     
     let rippleView = UIView()
     let rippleBackgroundView = UIView()
@@ -78,14 +79,19 @@ class ZFRippleButton: UIButton {
     }
     
     override func beginTrackingWithTouch(touch: UITouch!, withEvent event: UIEvent!) -> Bool {
+        
+        if trackTouchLocation {
+            rippleView.center = touch.locationInView(self)
+        }
+        
         UIView.animateWithDuration(0.1, animations: {
             self.rippleBackgroundView.alpha = 1
         }, completion: nil)
         
-        self.rippleView.transform = CGAffineTransformMakeScale(0.5, 0.5)
+        rippleView.transform = CGAffineTransformMakeScale(0.5, 0.5)
         UIView.animateWithDuration(0.7, delay: 0, options: .CurveEaseOut, animations: {
             self.rippleView.transform = CGAffineTransformIdentity
-            }, completion: nil)
+        }, completion: nil)
         
         if shadowRippleEnable {
             tempShadowRadius = layer.shadowRadius
