@@ -1,7 +1,7 @@
 ZFRippleButton
 ==============
 
-iOS Custom UIButton effect inspired by Google Material Design
+iOS Custom UIButton effect inspired by Google Material Design written in Swift
 
 <p align="center"><img src="https://raw.githubusercontent.com/zoonooz/ZFRippleButton/master/Screenshot/color-button.gif"/></p>
 
