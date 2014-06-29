@@ -67,6 +67,28 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hN-TT-axH" customClass="ZFRippleButton" customModule="ZFRippleButtonDemo" customModuleProvider="target">
+                                <rect key="frame" x="186" y="344" width="109" height="40"/>
+                                <color key="backgroundColor" red="0.1843137255" green="0.52549019610000003" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="PIZ-7G-bl9"/>
+                                    <constraint firstAttribute="width" constant="109" id="WYg-l7-gk8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="rippleColor">
+                                        <color key="value" red="0.12941176469999999" green="0.39607843139999999" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="rippleBackgroundColor">
+                                        <color key="value" red="0.16078431369999999" green="0.46666666670000001" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="trackTouchLocation" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -74,7 +96,9 @@
                             <constraint firstItem="BHL-2b-19F" firstAttribute="top" secondItem="sYH-iL-GfQ" secondAttribute="bottom" constant="69" id="5Jg-vW-Ucn"/>
                             <constraint firstAttribute="centerX" secondItem="sYH-iL-GfQ" secondAttribute="centerX" constant="-0.5" id="7ka-J2-fhG"/>
                             <constraint firstAttribute="centerX" secondItem="BHL-2b-19F" secondAttribute="centerX" constant="-0.5" id="CJD-8L-N15"/>
+                            <constraint firstAttribute="centerX" secondItem="0hN-TT-axH" secondAttribute="centerX" constant="-0.5" id="RlL-Y9-xoj"/>
                             <constraint firstItem="5Ty-8G-uWA" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="35" id="fFW-BY-7sU"/>
+                            <constraint firstItem="0hN-TT-axH" firstAttribute="top" secondItem="BHL-2b-19F" secondAttribute="bottom" constant="60" id="icC-fb-vtg"/>
                             <constraint firstAttribute="centerX" secondItem="5Ty-8G-uWA" secondAttribute="centerX" constant="-0.5" id="reD-7P-eBV"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
