@@ -10,7 +10,12 @@ import UIKit
 import QuartzCore
 
 class ZFRippleButton: UIButton {
-    
+
+    @IBInspectable var ripplePercent: Float = 0.8 {
+        didSet {
+            setupRippleView()
+        }
+    }
     @IBInspectable var rippleOverBounds: Bool = false {
         didSet {
             if rippleOverBounds {
@@ -32,7 +37,7 @@ class ZFRippleButton: UIButton {
             rippleBackgroundView.backgroundColor = rippleBackgroundColor
         }
     }
-    @IBInspectable var shadowRippleRadius: CGFloat = 1
+    @IBInspectable var shadowRippleRadius: Float = 1
     @IBInspectable var shadowRippleEnable: Bool = true
     @IBInspectable var trackTouchLocation: Bool = false
     
@@ -52,16 +57,7 @@ class ZFRippleButton: UIButton {
     }
     
     func setup() {
-        
-        var rippleWidthPercent: CGFloat = 0.9
-        var size: CGFloat = CGRectGetWidth(bounds) * rippleWidthPercent
-        var x: CGFloat = (CGRectGetWidth(bounds)/2) - (size/2)
-        var y: CGFloat = (CGRectGetHeight(bounds)/2) - (size/2)
-        var corner: CGFloat = size/2
-        
-        rippleView.backgroundColor = rippleColor
-        rippleView.frame = CGRectMake(x, y, size, size)
-        rippleView.layer.cornerRadius = corner
+        setupRippleView()
         
         rippleBackgroundView.backgroundColor = rippleBackgroundColor
         rippleBackgroundView.frame = bounds
@@ -75,11 +71,20 @@ class ZFRippleButton: UIButton {
         layer.shadowRadius = 0
         layer.shadowOffset = CGSize(width: 0, height: 1)
         layer.shadowColor = UIColor(white: 0.0, alpha: 0.5).CGColor
+    }
+    
+    func setupRippleView() {
+        var size: CGFloat = CGRectGetWidth(bounds) * ripplePercent
+        var x: CGFloat = (CGRectGetWidth(bounds)/2) - (size/2)
+        var y: CGFloat = (CGRectGetHeight(bounds)/2) - (size/2)
+        var corner: CGFloat = size/2
         
+        rippleView.backgroundColor = rippleColor
+        rippleView.frame = CGRectMake(x, y, size, size)
+        rippleView.layer.cornerRadius = corner
     }
     
     override func beginTrackingWithTouch(touch: UITouch!, withEvent event: UIEvent!) -> Bool {
-        
         if trackTouchLocation {
             rippleView.center = touch.locationInView(self)
         }
@@ -98,10 +103,10 @@ class ZFRippleButton: UIButton {
             tempShadowOpacity = layer.shadowOpacity
             
             var shadowAnim = CABasicAnimation(keyPath:"shadowRadius")
-            shadowAnim.toValue = NSNumber.numberWithFloat(shadowRippleRadius)
+            shadowAnim.toValue = shadowRippleRadius
             
             var opacityAnim = CABasicAnimation(keyPath:"shadowOpacity")
-            opacityAnim.toValue = NSNumber.numberWithFloat(1)
+            opacityAnim.toValue = 1
             
             var groupAnim = CAAnimationGroup()
             groupAnim.duration = 0.7
@@ -111,8 +116,6 @@ class ZFRippleButton: UIButton {
             
             layer.addAnimation(groupAnim, forKey:"shadow")
         }
-        
-        
         return super.beginTrackingWithTouch(touch, withEvent: event)
     }
     
@@ -133,10 +136,10 @@ class ZFRippleButton: UIButton {
             self.rippleView.transform = CGAffineTransformIdentity
             
             var shadowAnim = CABasicAnimation(keyPath:"shadowRadius")
-            shadowAnim.toValue = NSNumber.numberWithFloat(self.tempShadowRadius)
+            shadowAnim.toValue = self.tempShadowRadius
             
             var opacityAnim = CABasicAnimation(keyPath:"shadowOpacity")
-            opacityAnim.toValue = NSNumber.numberWithFloat(self.tempShadowOpacity)
+            opacityAnim.toValue = self.tempShadowOpacity
             
             var groupAnim = CAAnimationGroup()
             groupAnim.duration = 0.7
@@ -146,8 +149,6 @@ class ZFRippleButton: UIButton {
             
             self.layer.addAnimation(groupAnim, forKey:"shadowBack")
         }, completion: nil)
-        
-        
     }
-
+    
 }
