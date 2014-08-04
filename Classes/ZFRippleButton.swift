@@ -43,8 +43,8 @@ class ZFRippleButton: UIButton {
     
     let rippleView = UIView()
     let rippleBackgroundView = UIView()
-    var tempShadowRadius: CGFloat = 0
-    var tempShadowOpacity: CGFloat = 0
+    private var tempShadowRadius: CGFloat = 0
+    private var tempShadowOpacity: Float = 0
     
     init(coder aDecoder: NSCoder!)  {
         super.init(coder: aDecoder)
@@ -56,7 +56,7 @@ class ZFRippleButton: UIButton {
         setup()
     }
     
-    func setup() {
+    private func setup() {
         setupRippleView()
         
         rippleBackgroundView.backgroundColor = rippleBackgroundColor
@@ -73,8 +73,8 @@ class ZFRippleButton: UIButton {
         layer.shadowColor = UIColor(white: 0.0, alpha: 0.5).CGColor
     }
     
-    func setupRippleView() {
-        var size: CGFloat = CGRectGetWidth(bounds) * ripplePercent
+    private func setupRippleView() {
+        var size: CGFloat = CGRectGetWidth(bounds) * CGFloat(ripplePercent)
         var x: CGFloat = (CGRectGetWidth(bounds)/2) - (size/2)
         var y: CGFloat = (CGRectGetHeight(bounds)/2) - (size/2)
         var corner: CGFloat = size/2
