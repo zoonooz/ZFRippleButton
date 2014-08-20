@@ -52,7 +52,7 @@ class ZFRippleButton: UIButton {
   private var tempShadowRadius: CGFloat = 0
   private var tempShadowOpacity: Float = 0
   
-  required init(coder aDecoder: NSCoder!)  {
+  required init(coder aDecoder: NSCoder)  {
     super.init(coder: aDecoder)
     setup()
    }
