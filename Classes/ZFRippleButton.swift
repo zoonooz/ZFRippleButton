@@ -90,8 +90,8 @@ class ZFRippleButton: UIButton {
     rippleView.layer.cornerRadius = corner
   }
   
-  override func beginTrackingWithTouch(touch: UITouch!,
-    withEvent event: UIEvent!) -> Bool {
+  override func beginTrackingWithTouch(touch: UITouch,
+    withEvent event: UIEvent) -> Bool {
     if trackTouchLocation {
       rippleView.center = touch.locationInView(self)
     }
@@ -127,8 +127,8 @@ class ZFRippleButton: UIButton {
     return super.beginTrackingWithTouch(touch, withEvent: event)
   }
   
-  override func endTrackingWithTouch(touch: UITouch!,
-    withEvent event: UIEvent!) {
+  override func endTrackingWithTouch(touch: UITouch,
+    withEvent event: UIEvent) {
     super.endTrackingWithTouch(touch, withEvent: event)
     
     UIView.animateWithDuration(0.1, animations: {
