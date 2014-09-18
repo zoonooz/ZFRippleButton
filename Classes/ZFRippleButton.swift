@@ -119,7 +119,7 @@ class ZFRippleButton: UIButton {
       var groupAnim = CAAnimationGroup()
       groupAnim.duration = 0.7
       groupAnim.fillMode = kCAFillModeForwards
-      groupAnim.removedOnCompletion = false
+      groupAnim.removedOnCompletion = true
       groupAnim.animations = [shadowAnim, opacityAnim]
       
       layer.addAnimation(groupAnim, forKey:"shadow")
@@ -152,11 +152,18 @@ class ZFRippleButton: UIButton {
       var groupAnim = CAAnimationGroup()
       groupAnim.duration = 0.7
       groupAnim.fillMode = kCAFillModeForwards
-      groupAnim.removedOnCompletion = false
+      groupAnim.removedOnCompletion = true
       groupAnim.animations = [shadowAnim, opacityAnim]
       
       self.layer.addAnimation(groupAnim, forKey:"shadowBack")
     }, completion: nil)
   }
   
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.rippleBackgroundView.frame = bounds
+        setupRippleView()
+    }
+
 }
