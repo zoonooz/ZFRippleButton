@@ -9,6 +9,7 @@
 import UIKit
 import QuartzCore
 
+@IBDesignable
 class ZFRippleButton: UIButton {
   
   @IBInspectable var ripplePercent: Float = 0.8 {
@@ -46,11 +47,26 @@ class ZFRippleButton: UIButton {
   @IBInspectable var shadowRippleRadius: Float = 1
   @IBInspectable var shadowRippleEnable: Bool = true
   @IBInspectable var trackTouchLocation: Bool = false
+  @IBInspectable var buttonCornerRadius: Float = 0 {
+    didSet{
+            layer.mask = cornerRadiusMask
+        }
+   }
   
   let rippleView = UIView()
   let rippleBackgroundView = UIView()
   private var tempShadowRadius: CGFloat = 0
   private var tempShadowOpacity: Float = 0
+    
+  private var cornerRadiusMask:CAShapeLayer{
+    get{
+        let maskLayer = CAShapeLayer()
+        maskLayer.backgroundColor = UIColor.blackColor().CGColor
+        maskLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius:CGFloat(buttonCornerRadius)).CGPath
+        return maskLayer
+    }
+  }
+    
   
   required init(coder aDecoder: NSCoder)  {
     super.init(coder: aDecoder)
@@ -163,6 +179,7 @@ class ZFRippleButton: UIButton {
     override func layoutSubviews() {
         super.layoutSubviews()
         self.rippleBackgroundView.frame = bounds
+        layer.mask = cornerRadiusMask
         setupRippleView()
     }
 
