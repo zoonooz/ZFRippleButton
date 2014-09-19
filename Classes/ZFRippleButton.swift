@@ -43,15 +43,16 @@ class ZFRippleButton: UIButton {
       rippleBackgroundView.backgroundColor = rippleBackgroundColor
     }
   }
+  
+  @IBInspectable var buttonCornerRadius: Float = 0 {
+    didSet{
+      layer.mask = cornerRadiusMask
+    }
+  }
 
   @IBInspectable var shadowRippleRadius: Float = 1
   @IBInspectable var shadowRippleEnable: Bool = true
   @IBInspectable var trackTouchLocation: Bool = false
-  @IBInspectable var buttonCornerRadius: Float = 0 {
-    didSet{
-            layer.mask = cornerRadiusMask
-        }
-   }
   
   let rippleView = UIView()
   let rippleBackgroundView = UIView()
@@ -60,18 +61,18 @@ class ZFRippleButton: UIButton {
     
   private var cornerRadiusMask:CAShapeLayer{
     get{
-        let maskLayer = CAShapeLayer()
-        maskLayer.backgroundColor = UIColor.blackColor().CGColor
-        maskLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius:CGFloat(buttonCornerRadius)).CGPath
-        return maskLayer
+      let maskLayer = CAShapeLayer()
+      maskLayer.backgroundColor = UIColor.blackColor().CGColor
+      maskLayer.path = UIBezierPath(roundedRect: bounds,
+        cornerRadius:CGFloat(buttonCornerRadius)).CGPath
+      return maskLayer
     }
   }
-    
   
   required init(coder aDecoder: NSCoder)  {
     super.init(coder: aDecoder)
     setup()
-   }
+  }
   
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -175,12 +176,11 @@ class ZFRippleButton: UIButton {
     }, completion: nil)
   }
   
-
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        self.rippleBackgroundView.frame = bounds
-        layer.mask = cornerRadiusMask
-        setupRippleView()
-    }
+  override func layoutSubviews() {
+    super.layoutSubviews()
+    self.rippleBackgroundView.frame = bounds
+    layer.mask = cornerRadiusMask
+    setupRippleView()
+  }
 
 }
