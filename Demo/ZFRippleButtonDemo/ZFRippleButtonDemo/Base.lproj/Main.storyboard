@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.21" systemVersion="14A261i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.13"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -13,11 +13,11 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sYH-iL-GfQ" customClass="ZFRippleButton" customModule="ZFRippleButtonDemo" customModuleProvider="target">
-                                <rect key="frame" x="186" y="145" width="109" height="30"/>
+                                <rect key="frame" x="246" y="145" width="109" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="4YK-bf-jV4"/>
                                     <constraint firstAttribute="width" constant="109" id="pDm-J0-L65"/>
@@ -28,47 +28,33 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BHL-2b-19F" customClass="ZFRippleButton" customModule="ZFRippleButtonDemo" customModuleProvider="target">
-                                <rect key="frame" x="186" y="244" width="109" height="40"/>
-                                <color key="backgroundColor" red="0.18431372549019609" green="0.52549019607843139" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzG-8X-6pK" customClass="ZFRippleButton" customModule="ZFRippleButtonDemo" customModuleProvider="target">
+                                <rect key="frame" x="16" y="427" width="568" height="40"/>
+                                <color key="backgroundColor" red="0.1843137255" green="0.52549019610000003" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="109" id="XDu-wd-a2d"/>
-                                    <constraint firstAttribute="height" constant="40" id="wzk-xU-LzD"/>
+                                    <constraint firstAttribute="height" constant="40" id="2Te-o0-ssh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Rounded Button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="rippleColor">
-                                        <color key="value" red="0.12941176470588237" green="0.396078431372549" blue="0.7686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.12941176469999999" green="0.39607843139999999" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="rippleBackgroundColor">
-                                        <color key="value" red="0.16078431372549021" green="0.46666666666666667" blue="0.85490196078431369" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.16078431369999999" green="0.46666666670000001" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ty-8G-uWA" customClass="ZFRippleButton" customModule="ZFRippleButtonDemo" customModuleProvider="target">
-                                <rect key="frame" x="186" y="55" width="109" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="RlJ-Ph-RwX"/>
-                                    <constraint firstAttribute="width" constant="109" id="dJC-jH-mXS"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rippleOverBounds" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="rippleBackgroundColor">
-                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="trackTouchLocation" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rippleOverBounds" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="buttonCornerRadius">
+                                        <real key="value" value="12"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hN-TT-axH" customClass="ZFRippleButton" customModule="ZFRippleButtonDemo" customModuleProvider="target">
-                                <rect key="frame" x="186" y="344" width="109" height="40"/>
+                                <rect key="frame" x="246" y="344" width="109" height="40"/>
                                 <color key="backgroundColor" red="0.1843137255" green="0.52549019610000003" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="PIZ-7G-bl9"/>
@@ -89,19 +75,118 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="trackTouchLocation" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BHL-2b-19F" customClass="ZFRippleButton" customModule="ZFRippleButtonDemo" customModuleProvider="target">
+                                <rect key="frame" x="246" y="244" width="109" height="40"/>
+                                <color key="backgroundColor" red="0.18431372549019609" green="0.52549019607843139" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="109" id="XDu-wd-a2d"/>
+                                    <constraint firstAttribute="height" constant="40" id="wzk-xU-LzD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="rippleColor">
+                                        <color key="value" red="0.12941176470588237" green="0.396078431372549" blue="0.7686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="rippleBackgroundColor">
+                                        <color key="value" red="0.16078431372549021" green="0.46666666666666667" blue="0.85490196078431369" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ty-8G-uWA" customClass="ZFRippleButton" customModule="ZFRippleButtonDemo" customModuleProvider="target">
+                                <rect key="frame" x="246" y="55" width="109" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="RlJ-Ph-RwX"/>
+                                    <constraint firstAttribute="width" constant="109" id="dJC-jH-mXS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rippleOverBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="rippleBackgroundColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="sYH-iL-GfQ" firstAttribute="top" secondItem="5Ty-8G-uWA" secondAttribute="bottom" constant="60" id="2m8-rD-4bB"/>
                             <constraint firstItem="BHL-2b-19F" firstAttribute="top" secondItem="sYH-iL-GfQ" secondAttribute="bottom" constant="69" id="5Jg-vW-Ucn"/>
-                            <constraint firstAttribute="centerX" secondItem="sYH-iL-GfQ" secondAttribute="centerX" constant="-0.5" id="7ka-J2-fhG"/>
-                            <constraint firstAttribute="centerX" secondItem="BHL-2b-19F" secondAttribute="centerX" constant="-0.5" id="CJD-8L-N15"/>
-                            <constraint firstAttribute="centerX" secondItem="0hN-TT-axH" secondAttribute="centerX" constant="-0.5" id="RlL-Y9-xoj"/>
+                            <constraint firstItem="0hN-TT-axH" firstAttribute="centerX" secondItem="vzG-8X-6pK" secondAttribute="centerX" id="5bt-fd-6QV"/>
+                            <constraint firstItem="BHL-2b-19F" firstAttribute="centerY" secondItem="0hN-TT-axH" secondAttribute="centerY" constant="-100" id="5wm-7d-jhb">
+                                <variation key="heightClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstAttribute="centerX" secondItem="sYH-iL-GfQ" secondAttribute="centerX" id="7ka-J2-fhG"/>
+                            <constraint firstItem="5Ty-8G-uWA" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="246" id="Aup-zm-IR9">
+                                <variation key="heightClass=compact" constant="16"/>
+                            </constraint>
+                            <constraint firstAttribute="centerX" secondItem="BHL-2b-19F" secondAttribute="centerX" id="CJD-8L-N15"/>
+                            <constraint firstItem="BHL-2b-19F" firstAttribute="leading" secondItem="sYH-iL-GfQ" secondAttribute="trailing" id="Fds-3c-td5">
+                                <variation key="heightClass=compact" constant="30"/>
+                            </constraint>
+                            <constraint firstItem="sYH-iL-GfQ" firstAttribute="leading" secondItem="5Ty-8G-uWA" secondAttribute="trailing" constant="121" id="G45-EO-RJK">
+                                <variation key="heightClass=compact" constant="30"/>
+                            </constraint>
+                            <constraint firstItem="vzG-8X-6pK" firstAttribute="top" secondItem="0hN-TT-axH" secondAttribute="bottom" constant="43" id="GVn-GR-pV1"/>
+                            <constraint firstAttribute="trailing" secondItem="vzG-8X-6pK" secondAttribute="trailing" constant="16" id="Hra-11-iu3"/>
+                            <constraint firstItem="vzG-8X-6pK" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="QkJ-0t-8Pm"/>
+                            <constraint firstAttribute="centerX" secondItem="0hN-TT-axH" secondAttribute="centerX" id="RlL-Y9-xoj"/>
+                            <constraint firstItem="sYH-iL-GfQ" firstAttribute="top" secondItem="5Ty-8G-uWA" secondAttribute="bottom" constant="60" id="Y3R-zy-let">
+                                <variation key="heightClass=compact" constant="-30"/>
+                            </constraint>
                             <constraint firstItem="5Ty-8G-uWA" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="35" id="fFW-BY-7sU"/>
                             <constraint firstItem="0hN-TT-axH" firstAttribute="top" secondItem="BHL-2b-19F" secondAttribute="bottom" constant="60" id="icC-fb-vtg"/>
-                            <constraint firstAttribute="centerX" secondItem="5Ty-8G-uWA" secondAttribute="centerX" constant="-0.5" id="reD-7P-eBV"/>
+                            <constraint firstItem="sYH-iL-GfQ" firstAttribute="centerY" secondItem="5Ty-8G-uWA" secondAttribute="centerY" id="kYD-Pi-Jcj"/>
+                            <constraint firstAttribute="centerY" secondItem="5Ty-8G-uWA" secondAttribute="centerY" id="kyF-Jh-rJg"/>
+                            <constraint firstItem="BHL-2b-19F" firstAttribute="centerY" secondItem="sYH-iL-GfQ" secondAttribute="centerY" constant="104" id="ldi-7O-w69">
+                                <variation key="heightClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="0hN-TT-axH" firstAttribute="leading" secondItem="BHL-2b-19F" secondAttribute="trailing" constant="47" id="oYq-zq-0Qx">
+                                <variation key="heightClass=compact" constant="30"/>
+                            </constraint>
+                            <constraint firstAttribute="centerX" secondItem="5Ty-8G-uWA" secondAttribute="centerX" id="reD-7P-eBV"/>
                         </constraints>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Aup-zm-IR9"/>
+                                <exclude reference="kyF-Jh-rJg"/>
+                                <exclude reference="2m8-rD-4bB"/>
+                                <exclude reference="G45-EO-RJK"/>
+                                <exclude reference="kYD-Pi-Jcj"/>
+                                <exclude reference="5wm-7d-jhb"/>
+                                <exclude reference="Fds-3c-td5"/>
+                                <exclude reference="ldi-7O-w69"/>
+                                <exclude reference="5bt-fd-6QV"/>
+                                <exclude reference="oYq-zq-0Qx"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="Aup-zm-IR9"/>
+                                <exclude reference="fFW-BY-7sU"/>
+                                <include reference="kyF-Jh-rJg"/>
+                                <exclude reference="reD-7P-eBV"/>
+                                <exclude reference="7ka-J2-fhG"/>
+                                <include reference="G45-EO-RJK"/>
+                                <exclude reference="Y3R-zy-let"/>
+                                <include reference="kYD-Pi-Jcj"/>
+                                <exclude reference="5Jg-vW-Ucn"/>
+                                <include reference="5wm-7d-jhb"/>
+                                <exclude reference="CJD-8L-N15"/>
+                                <include reference="Fds-3c-td5"/>
+                                <include reference="ldi-7O-w69"/>
+                                <exclude reference="RlL-Y9-xoj"/>
+                                <exclude reference="icC-fb-vtg"/>
+                                <include reference="oYq-zq-0Qx"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
