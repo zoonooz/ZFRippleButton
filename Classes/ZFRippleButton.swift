@@ -18,18 +18,8 @@ class ZFRippleButton: UIButton {
     }
   }
   
-  @IBInspectable var rippleOverBounds: Bool = false {
-    didSet {
-      if rippleOverBounds {
-        rippleBackgroundView.layer.mask = nil
-      } else {
-        var maskLayer = CAShapeLayer()
-        maskLayer.path = UIBezierPath(roundedRect: bounds,
-          cornerRadius: layer.cornerRadius).CGPath
-        rippleBackgroundView.layer.mask = maskLayer
-      }
-    }
-  }
+  @IBInspectable var rippleOverBounds: Bool = false
+    
   
   @IBInspectable var rippleColor: UIColor = UIColor(white: 0.9, alpha: 1) {
     didSet {
@@ -46,7 +36,7 @@ class ZFRippleButton: UIButton {
   
   @IBInspectable var buttonCornerRadius: Float = 0 {
     didSet{
-      layer.mask = cornerRadiusMask
+      layer.cornerRadius = CGFloat(buttonCornerRadius)
     }
   }
 
@@ -59,17 +49,20 @@ class ZFRippleButton: UIButton {
   private var tempShadowRadius: CGFloat = 0
   private var tempShadowOpacity: Float = 0
     
-  private var cornerRadiusMask:CAShapeLayer{
-    get{
-      let maskLayer = CAShapeLayer()
-      maskLayer.backgroundColor = UIColor.blackColor().CGColor
-      maskLayer.path = UIBezierPath(roundedRect: bounds,
-        cornerRadius:CGFloat(buttonCornerRadius)).CGPath
-      return maskLayer
+  private var rippleMask: CAShapeLayer? {
+    get {
+      if !rippleOverBounds {
+        var maskLayer = CAShapeLayer()
+        maskLayer.path = UIBezierPath(roundedRect: bounds,
+          cornerRadius: layer.cornerRadius).CGPath
+        return maskLayer
+      } else {
+        return nil
+      }
     }
   }
   
-  required init(coder aDecoder: NSCoder)  {
+  required init(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
     setup()
   }
@@ -82,14 +75,13 @@ class ZFRippleButton: UIButton {
   private func setup() {
     setupRippleView()
     
-    rippleBackgroundView.backgroundColor = rippleBackgroundColor
-    rippleBackgroundView.frame = bounds
-    rippleBackgroundView.alpha = 0
-    
     rippleOverBounds = false
     
+    rippleBackgroundView.backgroundColor = rippleBackgroundColor
+    rippleBackgroundView.frame = bounds
     layer.addSublayer(rippleBackgroundView.layer)
     rippleBackgroundView.layer.addSublayer(rippleView.layer)
+    rippleBackgroundView.alpha = 0
     
     layer.shadowRadius = 0
     layer.shadowOffset = CGSize(width: 0, height: 1)
@@ -136,7 +128,7 @@ class ZFRippleButton: UIButton {
       var groupAnim = CAAnimationGroup()
       groupAnim.duration = 0.7
       groupAnim.fillMode = kCAFillModeForwards
-      groupAnim.removedOnCompletion = true
+      groupAnim.removedOnCompletion = false
       groupAnim.animations = [shadowAnim, opacityAnim]
       
       layer.addAnimation(groupAnim, forKey:"shadow")
@@ -169,7 +161,7 @@ class ZFRippleButton: UIButton {
       var groupAnim = CAAnimationGroup()
       groupAnim.duration = 0.7
       groupAnim.fillMode = kCAFillModeForwards
-      groupAnim.removedOnCompletion = true
+      groupAnim.removedOnCompletion = false
       groupAnim.animations = [shadowAnim, opacityAnim]
       
       self.layer.addAnimation(groupAnim, forKey:"shadowBack")
@@ -178,9 +170,13 @@ class ZFRippleButton: UIButton {
   
   override func layoutSubviews() {
     super.layoutSubviews()
-    self.rippleBackgroundView.frame = bounds
-    layer.mask = cornerRadiusMask
+    
+    let oldCenter = rippleView.center
     setupRippleView()
+    rippleView.center = oldCenter
+    
+    rippleBackgroundView.layer.frame = bounds
+    rippleBackgroundView.layer.mask = rippleMask    
   }
 
 }
