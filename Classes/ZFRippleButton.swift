@@ -135,11 +135,19 @@ class ZFRippleButton: UIButton {
     }
     return super.beginTrackingWithTouch(touch, withEvent: event)
   }
+
+  override func cancelTrackingWithEvent(event: UIEvent?) {
+    super.cancelTrackingWithEvent(event)
+    animateToNormal()
+  }
   
   override func endTrackingWithTouch(touch: UITouch,
     withEvent event: UIEvent) {
     super.endTrackingWithTouch(touch, withEvent: event)
-    
+    animateToNormal()
+  }
+ 
+  private func animateToNormal(){
     UIView.animateWithDuration(0.1, animations: {
       self.rippleBackgroundView.alpha = 1
     }, completion: {(success: Bool) -> () in
