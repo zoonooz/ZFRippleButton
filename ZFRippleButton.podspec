@@ -9,14 +9,14 @@
 
 Pod::Spec.new do |s|
   s.name             = "ZFRippleButton"
-  s.version          = "0.1"
+  s.version          = "0.2"
   s.summary          = "Custom UIButton effect inspired by Google Material Design"
   s.homepage         = "https://github.com/zoonooz/ZFRippleButton"
   s.license          = 'MIT'
   s.author           = { "Amornchai Kanokpullwad" => "amornchai.zoon@gmail.com" }
   s.source           = { :git => "https://github.com/zoonooz/ZFRippleButton.git", :tag => s.version.to_s }
 
-  s.platform     = :ios, '7.0'
+  s.platform     = :ios, '8.0'
   s.requires_arc = true
 
   s.source_files = 'Classes/*.swift'
