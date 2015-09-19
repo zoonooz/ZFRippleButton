@@ -50,7 +50,7 @@ class ZFRippleButton: UIButton {
     private var rippleMask: CAShapeLayer? {
         get {
             if !rippleOverBounds {
-                var maskLayer = CAShapeLayer()
+                let maskLayer = CAShapeLayer()
                 maskLayer.path = UIBezierPath(roundedRect: bounds,
                     cornerRadius: layer.cornerRadius).CGPath
                 return maskLayer
@@ -60,7 +60,7 @@ class ZFRippleButton: UIButton {
         }
     }
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
     }
@@ -85,17 +85,17 @@ class ZFRippleButton: UIButton {
     }
     
     private func setupRippleView() {
-        var size: CGFloat = CGRectGetWidth(bounds) * CGFloat(ripplePercent)
-        var x: CGFloat = (CGRectGetWidth(bounds)/2) - (size/2)
-        var y: CGFloat = (CGRectGetHeight(bounds)/2) - (size/2)
-        var corner: CGFloat = size/2
+        let size: CGFloat = CGRectGetWidth(bounds) * CGFloat(ripplePercent)
+        let x: CGFloat = (CGRectGetWidth(bounds)/2) - (size/2)
+        let y: CGFloat = (CGRectGetHeight(bounds)/2) - (size/2)
+        let corner: CGFloat = size/2
         
         rippleView.backgroundColor = rippleColor
         rippleView.frame = CGRectMake(x, y, size, size)
         rippleView.layer.cornerRadius = corner
     }
     
-    override func beginTrackingWithTouch(touch: UITouch, withEvent event: UIEvent) -> Bool {
+    override func beginTrackingWithTouch(touch: UITouch, withEvent event: UIEvent?) -> Bool {
         if trackTouchLocation {
             rippleView.center = touch.locationInView(self)
         }
@@ -116,13 +116,13 @@ class ZFRippleButton: UIButton {
             tempShadowRadius = layer.shadowRadius
             tempShadowOpacity = layer.shadowOpacity
             
-            var shadowAnim = CABasicAnimation(keyPath:"shadowRadius")
+            let shadowAnim = CABasicAnimation(keyPath:"shadowRadius")
             shadowAnim.toValue = shadowRippleRadius
             
-            var opacityAnim = CABasicAnimation(keyPath:"shadowOpacity")
+            let opacityAnim = CABasicAnimation(keyPath:"shadowOpacity")
             opacityAnim.toValue = 1
             
-            var groupAnim = CAAnimationGroup()
+            let groupAnim = CAAnimationGroup()
             groupAnim.duration = 0.7
             groupAnim.fillMode = kCAFillModeForwards
             groupAnim.removedOnCompletion = false
@@ -138,7 +138,7 @@ class ZFRippleButton: UIButton {
         animateToNormal()
     }
     
-    override func endTrackingWithTouch(touch: UITouch, withEvent event: UIEvent) {
+    override func endTrackingWithTouch(touch: UITouch?, withEvent event: UIEvent?) {
         super.endTrackingWithTouch(touch, withEvent: event)
         animateToNormal()
     }
@@ -157,17 +157,17 @@ class ZFRippleButton: UIButton {
         )
         
         UIView.animateWithDuration(0.7, delay: 0,
-            options: .CurveEaseOut | .BeginFromCurrentState,
+            options: [.CurveEaseOut, .BeginFromCurrentState],
             animations: {
                 self.rippleView.transform = CGAffineTransformIdentity
                 
-                var shadowAnim = CABasicAnimation(keyPath:"shadowRadius")
+                let shadowAnim = CABasicAnimation(keyPath:"shadowRadius")
                 shadowAnim.toValue = self.tempShadowRadius
                 
-                var opacityAnim = CABasicAnimation(keyPath:"shadowOpacity")
+                let opacityAnim = CABasicAnimation(keyPath:"shadowOpacity")
                 opacityAnim.toValue = self.tempShadowOpacity
                 
-                var groupAnim = CAAnimationGroup()
+                let groupAnim = CAAnimationGroup()
                 groupAnim.duration = 0.7
                 groupAnim.fillMode = kCAFillModeForwards
                 groupAnim.removedOnCompletion = false
