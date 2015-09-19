@@ -1,5 +1,9 @@
 # ZFRippleButton CHANGELOG
 
+## 0.3
+
+- swift 2.0
+
 ## 0.2
 
 - add ripple percent option
