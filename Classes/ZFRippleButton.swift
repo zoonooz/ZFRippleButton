@@ -46,6 +46,7 @@ class ZFRippleButton: UIButton {
     
     private var tempShadowRadius: CGFloat = 0
     private var tempShadowOpacity: Float = 0
+    private var touchCenterLocation: CGPoint?
     
     private var rippleMask: CAShapeLayer? {
         get {
@@ -97,7 +98,9 @@ class ZFRippleButton: UIButton {
     
     override func beginTrackingWithTouch(touch: UITouch, withEvent event: UIEvent?) -> Bool {
         if trackTouchLocation {
-            rippleView.center = touch.locationInView(self)
+            touchCenterLocation = touch.locationInView(self)
+        } else {
+            touchCenterLocation = nil
         }
         
         UIView.animateWithDuration(0.1,
@@ -180,9 +183,10 @@ class ZFRippleButton: UIButton {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        let oldCenter = rippleView.center
         setupRippleView()
-        rippleView.center = oldCenter
+        if let knownTouchCenterLocation = touchCenterLocation {
+            rippleView.center = knownTouchCenterLocation
+        }
         
         rippleBackgroundView.layer.frame = bounds
         rippleBackgroundView.layer.mask = rippleMask
