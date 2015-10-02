@@ -40,15 +40,7 @@ class ZFRippleButton: UIButton {
     @IBInspectable var shadowRippleRadius: Float = 1
     @IBInspectable var shadowRippleEnable: Bool = true
     @IBInspectable var trackTouchLocation: Bool = false
-    @IBInspectable var fastTouchUpResponse: Bool = true {
-        didSet {
-            if fastTouchUpResponse {
-                touchUpAnimationTime = 0.1
-            } else {
-                touchUpAnimationTime = 0.6
-            }
-        }
-    }
+    @IBInspectable var touchUpAnimationTime: Double = 0.6
     
     let rippleView = UIView()
     let rippleBackgroundView = UIView()
@@ -56,7 +48,6 @@ class ZFRippleButton: UIButton {
     private var tempShadowRadius: CGFloat = 0
     private var tempShadowOpacity: Float = 0
     private var touchCenterLocation: CGPoint?
-    private var touchUpAnimationTime: NSTimeInterval = 0.1
     
     private var rippleMask: CAShapeLayer? {
         get {
