@@ -1,5 +1,10 @@
 # ZFRippleButton CHANGELOG
 
+## 0.4
+
+- add option to custom touch up animation time, thanks @ronaldmak (#14)
+- fix ripple view position is wrong, thanks @ronaldmak (#12)
+
 ## 0.3
 
 - swift 2.0
