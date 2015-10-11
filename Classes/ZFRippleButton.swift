@@ -40,6 +40,7 @@ class ZFRippleButton: UIButton {
     @IBInspectable var shadowRippleRadius: Float = 1
     @IBInspectable var shadowRippleEnable: Bool = true
     @IBInspectable var trackTouchLocation: Bool = false
+    @IBInspectable var touchUpAnimationTime: Double = 0.6
     
     let rippleView = UIView()
     let rippleBackgroundView = UIView()
@@ -152,7 +153,8 @@ class ZFRippleButton: UIButton {
                 self.rippleBackgroundView.alpha = 1
             },
             completion: {(success: Bool) -> () in
-                UIView.animateWithDuration(0.6 ,
+                // Fast Touch Up Response: Original animation time is 0.6. Too long animation interval causes slow response to fast consecutive button press!
+                UIView.animateWithDuration(self.touchUpAnimationTime,
                     animations: {
                         self.rippleBackgroundView.alpha = 0
                     }, completion: nil)
