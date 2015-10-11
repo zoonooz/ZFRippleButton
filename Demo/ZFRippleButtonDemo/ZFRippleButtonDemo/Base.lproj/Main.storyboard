@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -19,6 +19,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sYH-iL-GfQ" customClass="ZFRippleButton" customModule="ZFRippleButtonDemo" customModuleProvider="target">
                                 <rect key="frame" x="246" y="145" width="109" height="30"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="4YK-bf-jV4"/>
                                     <constraint firstAttribute="width" constant="109" id="pDm-J0-L65"/>
@@ -31,6 +32,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzG-8X-6pK" customClass="ZFRippleButton" customModule="ZFRippleButtonDemo" customModuleProvider="target">
                                 <rect key="frame" x="16" y="427" width="568" height="40"/>
+                                <animations/>
                                 <color key="backgroundColor" red="0.1843137255" green="0.52549019610000003" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="2Te-o0-ssh"/>
@@ -55,6 +57,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hN-TT-axH" customClass="ZFRippleButton" customModule="ZFRippleButtonDemo" customModuleProvider="target">
                                 <rect key="frame" x="246" y="344" width="109" height="40"/>
+                                <animations/>
                                 <color key="backgroundColor" red="0.1843137255" green="0.52549019610000003" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="PIZ-7G-bl9"/>
@@ -77,6 +80,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BHL-2b-19F" customClass="ZFRippleButton" customModule="ZFRippleButtonDemo" customModuleProvider="target">
                                 <rect key="frame" x="246" y="244" width="109" height="40"/>
+                                <animations/>
                                 <color key="backgroundColor" red="0.18431372549019609" green="0.52549019607843139" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="109" id="XDu-wd-a2d"/>
@@ -98,6 +102,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ty-8G-uWA" customClass="ZFRippleButton" customModule="ZFRippleButtonDemo" customModuleProvider="target">
                                 <rect key="frame" x="246" y="55" width="109" height="30"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="RlJ-Ph-RwX"/>
                                     <constraint firstAttribute="width" constant="109" id="dJC-jH-mXS"/>
@@ -115,6 +120,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="sYH-iL-GfQ" firstAttribute="top" secondItem="5Ty-8G-uWA" secondAttribute="bottom" constant="60" id="2m8-rD-4bB"/>

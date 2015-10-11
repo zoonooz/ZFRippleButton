@@ -147,13 +147,12 @@ class ZFRippleButton: UIButton {
         animateToNormal()
     }
     
-    private func animateToNormal(){
+    private func animateToNormal() {
         UIView.animateWithDuration(0.1,
             animations: {
                 self.rippleBackgroundView.alpha = 1
             },
             completion: {(success: Bool) -> () in
-                // Fast Touch Up Response: Original animation time is 0.6. Too long animation interval causes slow response to fast consecutive button press!
                 UIView.animateWithDuration(self.touchUpAnimationTime,
                     animations: {
                         self.rippleBackgroundView.alpha = 0

@@ -22,15 +22,9 @@ Set the UIButton class in Nib to ```ZFRippleButton``` or create it programmatica
 
 <img src="Screenshot/shadow-button.gif"/>
 
+```touchUpAnimationTime``` is time interval of touch up animation
+
 and you can set the color of ripple using ```rippleColor``` and ```rippleBackgroundColor```
-
-```touchUpAnimationTime``` is time interval of touch up animation. Default value is 0.6 second and causes slow response to fast consecutive button press as follows:
-
-<img src="Screenshot/longer-touchup-animation-time.gif"/>
-
-Shorten this value (the following is 0.1 second) to make the response fast.
-
-<img src="Screenshot/shorter-touchup-animation-time.gif"/>
 
 ## Requirements
 - iOS >= 7.0
