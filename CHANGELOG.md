@@ -1,5 +1,10 @@
 # ZFRippleButton CHANGELOG
 
+## 0.5
+
+- fix type cannot not found when using with cocoapods (#17)
+- fix missing some initializer
+
 ## 0.4
 
 - add option to custom touch up animation time, thanks @ronaldmak (#14)
