@@ -1,8 +1,12 @@
 # ZFRippleButton CHANGELOG
 
+## 0.5.1
+
+- fix properties access level (#19)
+
 ## 0.5
 
-- fix type cannot not found when using with cocoapods (#17)
+- fix type not found (#17)
 - fix missing some initializer
 
 ## 0.4
