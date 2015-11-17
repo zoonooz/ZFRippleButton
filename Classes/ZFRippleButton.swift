@@ -12,35 +12,35 @@ import QuartzCore
 @IBDesignable
 public class ZFRippleButton: UIButton {
     
-    @IBInspectable var ripplePercent: Float = 0.8 {
+    @IBInspectable public var ripplePercent: Float = 0.8 {
         didSet {
             setupRippleView()
         }
     }
     
-    @IBInspectable var rippleColor: UIColor = UIColor(white: 0.9, alpha: 1) {
+    @IBInspectable public var rippleColor: UIColor = UIColor(white: 0.9, alpha: 1) {
         didSet {
             rippleView.backgroundColor = rippleColor
         }
     }
     
-    @IBInspectable var rippleBackgroundColor: UIColor = UIColor(white: 0.95, alpha: 1) {
+    @IBInspectable public var rippleBackgroundColor: UIColor = UIColor(white: 0.95, alpha: 1) {
         didSet {
             rippleBackgroundView.backgroundColor = rippleBackgroundColor
         }
     }
     
-    @IBInspectable var buttonCornerRadius: Float = 0 {
+    @IBInspectable public var buttonCornerRadius: Float = 0 {
         didSet{
             layer.cornerRadius = CGFloat(buttonCornerRadius)
         }
     }
     
-    @IBInspectable var rippleOverBounds: Bool = false
-    @IBInspectable var shadowRippleRadius: Float = 1
-    @IBInspectable var shadowRippleEnable: Bool = true
-    @IBInspectable var trackTouchLocation: Bool = false
-    @IBInspectable var touchUpAnimationTime: Double = 0.6
+    @IBInspectable public var rippleOverBounds: Bool = false
+    @IBInspectable public var shadowRippleRadius: Float = 1
+    @IBInspectable public var shadowRippleEnable: Bool = true
+    @IBInspectable public var trackTouchLocation: Bool = false
+    @IBInspectable public var touchUpAnimationTime: Double = 0.6
     
     let rippleView = UIView()
     let rippleBackgroundView = UIView()

@@ -27,7 +27,7 @@ Set the UIButton class in Nib to ```ZFRippleButton``` or create it programmatica
 and you can set the color of ripple using ```rippleColor``` and ```rippleBackgroundColor```
 
 ## Requirements
-- iOS >= 7.0
+- iOS >= 8.0
 
 ## Author
 
