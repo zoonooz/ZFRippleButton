@@ -81,9 +81,9 @@ open class ZFRippleButton: UIButton {
         
         rippleBackgroundView.backgroundColor = rippleBackgroundColor
         rippleBackgroundView.frame = bounds
-        layer.addSublayer(rippleBackgroundView.layer)
-        rippleBackgroundView.layer.addSublayer(rippleView.layer)
+        rippleBackgroundView.addSubview(rippleView)
         rippleBackgroundView.alpha = 0
+        addSubview(rippleBackgroundView)
         
         layer.shadowRadius = 0
         layer.shadowOffset = CGSize(width: 0, height: 1)
