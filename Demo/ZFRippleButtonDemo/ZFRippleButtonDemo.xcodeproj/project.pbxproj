@@ -13,7 +13,7 @@
 		DC346CC4195F150E0099F81E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC346CC3195F150E0099F81E /* Images.xcassets */; };
 		DC346CD0195F150E0099F81E /* ZFRippleButtonDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC346CCF195F150E0099F81E /* ZFRippleButtonDemoTests.swift */; };
 		DC346CDB195F157D0099F81E /* ZFRippleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC346CDA195F157D0099F81E /* ZFRippleButton.swift */; };
-		DCD98C8B1BCA45340006FF8F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCD98C891BCA45340006FF8F /* Launch Screen.storyboard */; settings = {ASSET_TAGS = (); }; };
+		DCD98C8B1BCA45340006FF8F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCD98C891BCA45340006FF8F /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -174,9 +174,11 @@
 				TargetAttributes = {
 					DC346CB6195F150E0099F81E = {
 						CreatedOnToolsVersion = 6.0;
+						LastSwiftMigration = 0800;
 					};
 					DC346CC8195F150E0099F81E = {
 						CreatedOnToolsVersion = 6.0;
+						LastSwiftMigration = 0800;
 						TestTargetID = DC346CB6195F150E0099F81E;
 					};
 				};
@@ -354,6 +356,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -365,6 +368,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -384,6 +388,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Debug;
@@ -400,6 +405,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;
