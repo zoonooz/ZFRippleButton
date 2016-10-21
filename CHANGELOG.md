@@ -1,5 +1,10 @@
 # ZFRippleButton CHANGELOG
 
+## 0.6
+
+- swift 3.0
+- use view instead of layer (#23)
+
 ## 0.5.1
 
 - fix properties access level (#19)

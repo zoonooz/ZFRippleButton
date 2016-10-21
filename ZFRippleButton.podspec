@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "ZFRippleButton"
-  s.version          = "0.5.1"
+  s.version          = "0.6"
   s.summary          = "Custom UIButton effect inspired by Google Material Design"
   s.homepage         = "https://github.com/zoonooz/ZFRippleButton"
   s.license          = 'MIT'
