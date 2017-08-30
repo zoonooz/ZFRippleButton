@@ -42,8 +42,8 @@ open class ZFRippleButton: UIButton {
     @IBInspectable open var trackTouchLocation: Bool = false
     @IBInspectable open var touchUpAnimationTime: Double = 0.6
     
-    let rippleView = UIView()
-    let rippleBackgroundView = UIView()
+    public let rippleView = UIView()
+    public let rippleBackgroundView = UIView()
     
     fileprivate var tempShadowRadius: CGFloat = 0
     fileprivate var tempShadowOpacity: Float = 0
