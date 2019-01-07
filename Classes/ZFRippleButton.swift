@@ -108,16 +108,16 @@ open class ZFRippleButton: UIButton {
             touchCenterLocation = nil
         }
         
-        UIView.animate(withDuration: 0.1, delay: 0, options: .allowUserInteraction, animations: { 
-            self.rippleBackgroundView.alpha = 1
+        UIView.animate(withDuration: 0.1, delay: 0, options: .allowUserInteraction, animations: { [weak self] in
+            self?.rippleBackgroundView.alpha = 1
             }, completion: nil)
         
         rippleView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
         
         
         UIView.animate(withDuration: 0.7, delay: 0, options: [.curveEaseOut, .allowUserInteraction],
-            animations: {
-                self.rippleView.transform = CGAffineTransform.identity
+            animations: { [weak self] in
+                self?.rippleView.transform = CGAffineTransform.identity
             }, completion: nil)
         
         if shadowRippleEnable {
@@ -152,25 +152,25 @@ open class ZFRippleButton: UIButton {
     }
     
     fileprivate func animateToNormal() {
-        UIView.animate(withDuration: 0.1, delay: 0, options: .allowUserInteraction, animations: {
-            self.rippleBackgroundView.alpha = 1
+        UIView.animate(withDuration: 0.1, delay: 0, options: .allowUserInteraction, animations: { [weak self] in
+            self?.rippleBackgroundView.alpha = 1
             }, completion: {(success: Bool) -> () in
-                UIView.animate(withDuration: self.touchUpAnimationTime, delay: 0, options: .allowUserInteraction, animations: {
-                    self.rippleBackgroundView.alpha = 0
+                UIView.animate(withDuration: self.touchUpAnimationTime, delay: 0, options: .allowUserInteraction, animations: { [weak self] in
+                    self?.rippleBackgroundView.alpha = 0
                     }, completion: nil)
         })
         
         
         UIView.animate(withDuration: 0.7, delay: 0,
             options: [.curveEaseOut, .beginFromCurrentState, .allowUserInteraction],
-            animations: {
-                self.rippleView.transform = CGAffineTransform.identity
+            animations: { [weak self, tempShadowRadius, tempShadowOpacity] in
+                self?.rippleView.transform = CGAffineTransform.identity
                 
                 let shadowAnim = CABasicAnimation(keyPath:"shadowRadius")
-                shadowAnim.toValue = self.tempShadowRadius
+                shadowAnim.toValue = tempShadowRadius
                 
                 let opacityAnim = CABasicAnimation(keyPath:"shadowOpacity")
-                opacityAnim.toValue = self.tempShadowOpacity
+                opacityAnim.toValue = tempShadowOpacity
                 
                 let groupAnim = CAAnimationGroup()
                 groupAnim.duration = 0.7
@@ -178,7 +178,7 @@ open class ZFRippleButton: UIButton {
                 groupAnim.isRemovedOnCompletion = false
                 groupAnim.animations = [shadowAnim, opacityAnim]
                 
-                self.layer.add(groupAnim, forKey:"shadowBack")
+                self?.layer.add(groupAnim, forKey:"shadowBack")
             }, completion: nil)
     }
     
